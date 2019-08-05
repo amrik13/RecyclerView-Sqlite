@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Register">
+
+    <TextView
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Details:"
+        android:textSize="30sp"
+        android:gravity="center"/>
+    <TextView
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Name:"
+        android:layout_marginTop="10dp"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/nameId"
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+    <TextView
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Password:"
+        android:layout_marginTop="20dp"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/passwordId"
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+    <TextView
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your User Name:"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        tools:ignore="DuplicateIds" />
+    <EditText
+        android:id="@+id/userNameId"
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+    <TextView
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Address:"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        tools:ignore="DuplicateIds" />
+    <EditText
+        android:id="@+id/addressId"
+        android:textColor="#000"
+        android:maxLines="3"
+        android:fontFamily="serif-monospace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+    <Button
+        android:id="@+id/registerBtn"
+        android:textColor="#000"
+        android:fontFamily="serif-monospace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Register"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:padding="10sp" />
+
+</LinearLayout>
