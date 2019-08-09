@@ -3,17 +3,20 @@ package com.amriksinghpadam.sharedpref;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class DeleteUser extends AppCompatActivity {
 
     ListView listview;
+    Button recyclerBtn,lineView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,8 @@ public class DeleteUser extends AppCompatActivity {
         getSupportActionBar().setTitle("All User:");
 
         listview = findViewById(R.id.listViewId);
+        lineView = findViewById(R.id.hRecyclerBtnId);
+        recyclerBtn = findViewById(R.id.recyclerBtnId);
 
         final MyDatabase myDb = new MyDatabase(this);
         final Cursor allUser = myDb.getAllUser();
@@ -66,5 +71,22 @@ public class DeleteUser extends AppCompatActivity {
         };
         listview.setOnItemClickListener(listListener);
 
+        recyclerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DeleteUser.this,MyRecyclerView.class);
+                intent.putExtra("id",1);
+                startActivity(intent);
+            }
+        });
+
+        lineView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DeleteUser.this,MyRecyclerView.class);
+                intent.putExtra("id",2);
+                startActivity(intent);
+            }
+        });
     }
 }
